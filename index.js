@@ -40,6 +40,16 @@ inquirer
                 'No, thanks.'
             ]
         },
-    ]);
+    ])
+    .then(answers => {
+        console.log(answers);
+        // THEN an HTML file is generated that displays a nicely formatted team roster based on user input
+        fs.writeFile(`${answers.name}.json`, JSON.stringify(answers, null, 2), err => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            console.log('Success!');
+        })
+    });
 
-// THEN an HTML file is generated that displays a nicely formatted team roster based on user input
