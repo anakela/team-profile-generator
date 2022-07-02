@@ -53,3 +53,4 @@ inquirer
         })
     });
 
+module.exports = index.js;
