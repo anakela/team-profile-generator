@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const employee = require('./dist/Employee');
+const employee = require('./lib/Employee');
+// const { inherits } = require('util');
 
 // WHEN I am prompted for my team members and their information
 inquirer
@@ -45,7 +46,7 @@ inquirer
     .then(answers => {
         console.log(answers);
         // THEN an HTML file is generated that displays a nicely formatted team roster based on user input
-        fs.writeFile(`${answers.name}.html`, JSON.stringify(answers, null, 2), err => {
+        fs.writeFile(`./dist/${answers.name}.html`, JSON.stringify(answers, null, 2), err => {
             if (err) {
                 console.log(err);
                 return;
@@ -53,5 +54,7 @@ inquirer
             console.log('Success!');
         })
     });
+
+init();
 
 module.exports = index.js;
