@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const employee = require('./dist/Employee');
 
 // WHEN I am prompted for my team members and their information
 inquirer
