@@ -46,7 +46,7 @@ inquirer
     .then(answers => {
         console.log(answers);
         // THEN an HTML file is generated that displays a nicely formatted team roster based on user input
-        fs.writeFile(`./dist/${answers.name}.html`, JSON.stringify(answers, null, 2), err => {
+        fs.writeFile(`dist/${answers.name}.html`, JSON.stringify(answers, null, 2), err => {
             if (err) {
                 console.log(err);
                 return;
