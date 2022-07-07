@@ -8,9 +8,9 @@ const employArr = [];
 const newManager = [
     {
         message: 'What is your manager name?',
-        name: 'manager',
+        name: 'Manager',
         type: 'input',
-        default: 'Team Manager',
+        // default: 'Team Manager',
         // validate: 
     },
     {

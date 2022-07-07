@@ -116,3 +116,4 @@ Use this section to outline areas that you want to continue focusing on in futur
   - Nolan Spence
   - Ivy Chang
 - Bobbi Tarkany (Tutor)
+- Matthew Kaus (TA)
