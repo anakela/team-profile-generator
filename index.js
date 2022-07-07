@@ -8,7 +8,7 @@ const employArr = [];
 const newManager = [
     {
         message: 'What is your manager name?',
-        name: 'manager-name',
+        name: 'manager',
         type: 'input',
         default: 'Team Manager',
         // validate: 
@@ -135,62 +135,3 @@ function addEngInt() {
 }
 
 addManager();
-
-// WHEN I am prompted for my team members and their information
-
-
-
-// const employeeQuestions = ([
-//     {
-//         message: 'What is your manager name?',
-//         name: 'manager-name',
-//         type: 'input',
-//         default: 'Team Manager',
-//         // validate: 
-//     },
-//     {
-//         message: 'What is your employee ID?',
-//         name: 'id',
-//         type: 'input',
-//         default: '1',
-//         // validate: 
-//     },
-//     {
-//         message: 'What is your email address?',
-//         name: 'email',
-//         type: 'input',
-//         default: 'example@example.com',
-//         // validate: 
-//     },
-//     {
-//         message: 'What is your office number?',
-//         name: 'off-num',
-//         type: 'input',
-//         default: '1',
-//         // validate: 
-//     },
-//     {
-//         message: 'Would you like to add an engineer or intern?',
-//         name: 'add-eng-int',
-//         type: 'rawlist',
-//         choices: [
-//             'Yes, add engineer.',
-//             'Yes, add intern.',
-//             'No, thanks.'
-//         ],
-//         // validate: 
-//     },
-// ]);
-
-// const engineerQuestions = ([
-
-// ]);
-
-// WHEN I enter the team manager’s name, employee ID, email address, and office number
-// THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
-// WHEN I select the engineer option
-// THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
-
-// init();
-
-// module.exports = index.js;
