@@ -79,6 +79,7 @@ function generateHtmlPage() {
 
       <main class="row col-sm-12 justify-content-center align-content-center" id="main">
         ${renderCard()}
+        ${console.log(renderCard())}
       </main>
 </body>
 </html>
