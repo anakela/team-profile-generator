@@ -1,0 +1,14 @@
+#ul-container {
+    margin: auto;
+}
+
+.fa-solid {
+    padding-right: 5px;
+}
+
+#manager-card, 
+#engineer-card, 
+#intern-card {
+    margin: 20px;
+    filter: drop-shadow(15px 15px 10px gray);
+}

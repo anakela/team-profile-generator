@@ -24,7 +24,6 @@ const newManager = [
         message: 'What is your email address?',
         name: 'email',
         type: 'input',
-        default: 'example@example.com',
         // validate: 
     },
     {
@@ -59,7 +58,7 @@ function addTeamMember() {
             }
         ])
         .then(answers => {
-            if (answers.add - eng - int === 'Yes, add team member') {
+            if (answers.name === 'Yes, add team member') {
                 addEngInt();
             } else {
                 fs.writeFile(`dist/team.html`, generateHtmlPage(employArr), err => {
