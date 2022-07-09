@@ -8,7 +8,7 @@ const employArr = [];
 const newManager = [
     {
         message: 'What is your manager name?',
-        name: 'Manager',
+        name: 'manager',
         type: 'input',
         // default: 'Team Manager',
         // validate: 
@@ -28,7 +28,7 @@ const newManager = [
     },
     {
         message: 'What is your office number?',
-        name: 'off-num',
+        name: 'offNum',
         type: 'input',
         default: '1',
         // validate: 
@@ -53,17 +53,18 @@ function addTeamMember() {
         .prompt([
             {
                 message: 'Would you like to add another team member?',
-                name: 'add-eng-int',
-                type: 'rawlist',
+                name: 'addEngInt',
+                type: 'list',
                 choices: [
-                    'Yes, add a team member',
+                    'Yes, add a team member.',
                     'No, build the team.'
                 ],
                 // validate: 
             }
         ])
         .then(answers => {
-            if (answers.name === 'Yes, add team member') {
+            console.log(answers.addEngInt);
+            if (answers.addEngInt == 'Yes, add a team member.') {
                 addEngInt();
             } else {
                 fs.writeFile(`dist/team.html`, generateHtmlPage(employArr), err => {
@@ -86,7 +87,7 @@ function addEngInt() {
         .prompt([
             {
                 message: 'What is your employee name?',
-                name: 'employee-name',
+                name: 'employeeName',
                 type: 'input',
                 // validate: 
             },
@@ -105,8 +106,8 @@ function addEngInt() {
             },
             {
                 message: 'What type of employee is this?',
-                name: 'add-eng-int',
-                type: 'rawlist',
+                name: 'addEngInt',
+                type: 'list',
                 choices: [
                     'Engineer',
                     'Intern',
@@ -120,7 +121,7 @@ function addEngInt() {
                 default: 'github_username',
                 // validate: ,
                 when: (answers) => {
-                    return answers.add-eng-int === 'Engineer';
+                    return answers.addEngInt === 'Engineer';
                 }
             },
             {
@@ -130,7 +131,7 @@ function addEngInt() {
                 default: 'School Name',
                 // validate: ,
                 when: (answers) => {
-                    return answers.add-eng-int === 'Intern';
+                    return answers.addEngInt === 'Intern';
                 }
             }
         ])
