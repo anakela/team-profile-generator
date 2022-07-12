@@ -1,64 +1,75 @@
+function generateCards(employArr) {
+  let str = '';
+  for (let i = 0; i < employArr.length; i++) {
+    str += renderCard(employArr[i]);
+  }
+  return str;
+}
+
 function renderCard(employee) {
-    switch (employee) {
-        case 'Manager':
-            return `
+  switch (employee.getRole()) {
+    case 'Manager':
+      return `
 <div class="card">
   <div class="card-header" id="manager-card">
-    <h4>Manager</h4><br />
-    <h5><i class="fa-solid fa-mug-hot"></i>${addManager(data.manager)}</h5>
+    <h4>${employee.name}</h4><br />
+    <h5><i class="fa-solid fa-mug-hot"></i>${employee.getRole()}</h5>
   </div>
   <div class="card-body">
     <div class="card" style="width: 18rem;">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${addManager(data.id)}</li>
-            <li class="list-group-item">Email: <a href="mailto:${addManager(data.email)}" title="Email me!">${addManager(data.email)}</a></li>
-            <li class="list-group-item">Office Number: ${addManager(data.offNum)}</li>
+            <li class="list-group-item">ID: ${employee.id}</li>
+            <li class="list-group-item">Email: <a href="mailto:${employee.email}" title="Email me!">${employee.email}</a></li>
+            <li class="list-group-item">Office Number: ${employee.officeNumber}</li>
         </ul>
     </div>
   </div>
 </div>
             `;
-        case 'Engineer':
-            return `
-<div class="card" id="engineer-card">
-  <div class="card-header">
-    <h4>${addEngInt(data.employeeName)}</h4>
-    <h5><i class="fa-solid fa-glasses"></i>${addEngInt(data.addEngInt)}</h5>
-  </div>
-  <div class="card-body">
-    <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${addEngInt(data.id)}</li>
-            <li class="list-group-item">Email: ${addEngInt(data.email)}</li>
-            <li class="list-group-item">GitHub: <a href="https://www.github.com/${addEngInt(data.github)}" title="Visit My GitHub Profile!" target="_blank">${addEngInt(data.github)}</a></li>
-        </ul>
-    </div>
-  </div>
-</div>
-            `;
-        case 'Intern':
-            return `
-<div class="card" id="intern-card">
-  <div class="card-header">
-    <h4>${addEngInt(data.employeeName)}</h4>
-    <h5><i class="fa-solid fa-graduation-cap"></i>${addEngInt(data.addEngInt)}</h5>
-  </div>
-  <div class="card-body">
-    <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${addEngInt(data.id)}</li>
-            <li class="list-group-item">Email: <a href="mailto:${addEngInt(data.email)}" title="Email me!">${addEngInt(data.email)}</a></li>
-            <li class="list-group-item">School: ${addEngInt(data.school)}</li>
-        </ul>
-    </div>
-  </div>
-</div>
-            `;
-    }
+      break;
+//     case 'Engineer':
+//       return `
+// <div class="card" id="engineer-card">
+//   <div class="card-header">
+//     <h4>${addEngInt(data.employeeName)}</h4>
+//     <h5><i class="fa-solid fa-glasses"></i>${addEngInt(data.addEngInt)}</h5>
+//   </div>
+//   <div class="card-body">
+//     <div class="card" style="width: 18rem;">
+//         <ul class="list-group list-group-flush">
+//             <li class="list-group-item">ID: ${addEngInt(data.id)}</li>
+//             <li class="list-group-item">Email: ${addEngInt(data.email)}</li>
+//             <li class="list-group-item">GitHub: <a href="https://www.github.com/${addEngInt(data.github)}" title="Visit My GitHub Profile!" target="_blank">${addEngInt(data.github)}</a></li>
+//         </ul>
+//     </div>
+//   </div>
+// </div>
+//             `;
+//       break;
+//     case 'Intern':
+//       return `
+// <div class="card" id="intern-card">
+//   <div class="card-header">
+//     <h4>${addEngInt(data.employeeName)}</h4>
+//     <h5><i class="fa-solid fa-graduation-cap"></i>${addEngInt(data.addEngInt)}</h5>
+//   </div>
+//   <div class="card-body">
+//     <div class="card" style="width: 18rem;">
+//         <ul class="list-group list-group-flush">
+//             <li class="list-group-item">ID: ${addEngInt(data.id)}</li>
+//             <li class="list-group-item">Email: <a href="mailto:${addEngInt(data.email)}" title="Email me!">${addEngInt(data.email)}</a></li>
+//             <li class="list-group-item">School: ${addEngInt(data.school)}</li>
+//         </ul>
+//     </div>
+//   </div>
+// </div>
+//             `;
+//       break;
+  }
 };
 
-function generateHtmlPage() {
-    return `
+function generateHtmlPage(employArr) {
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +89,7 @@ function generateHtmlPage() {
       </nav>
 
       <main class="row col-sm-12 justify-content-center align-content-center" id="main">
-        ${renderCard()}
+        ${generateCards(employArr)}
       </main>
 </body>
 </html>

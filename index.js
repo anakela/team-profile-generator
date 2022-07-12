@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const employee = require('./lib/Employee');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 const generateHtmlPage = require('./src/generateHtmlPage');
 
 const employArr = [];
@@ -8,7 +10,7 @@ const employArr = [];
 const newManager = [
     {
         message: 'What is your manager name?',
-        name: 'manager',
+        name: 'name',
         type: 'input',
         // default: 'Team Manager',
         // validate: 
@@ -39,6 +41,8 @@ function addManager() {
         // THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
         .prompt(newManager)
         .then(answers => {
+            const manager = new Manager(answers.name, answers.id, answers.email, answers.offNum);
+            employArr.push(manager);
             // WHEN I enter the team manager’s name, employee ID, email address, and office number
             console.log(answers);
             addTeamMember();
@@ -136,6 +140,12 @@ function addEngInt() {
             }
         ])
         .then(answers => {
+            const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+            employArr.push(engineer);
+
+            const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+            employArr.push(intern);
+            
             console.log(answers);
             addTeamMember();
         });
