@@ -16,8 +16,6 @@
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The Challenge
@@ -60,7 +58,7 @@ THEN I exit the application, and the HTML is generated
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./assets/images/team-profile-generator-screenshot.png)
 
 ### Links
 
@@ -72,8 +70,8 @@ THEN I exit the application, and the HTML is generated
 
 - Semantic HTML5 markup
 - CSS
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript
+- Node.js
 
 ### What I Learned
 
@@ -97,13 +95,26 @@ If you want more help with writing markdown, check out [The Markdown Guide](http
 
 ### Continued Development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I would love to use this application in conjunction with a database in the future.  I believe this would allow me to better hone my skills with not only JavaScript and Node.js, but also with SQL and other database technologies.
 
 ### Useful Resources
 
+- [Bootstrap](https://getbootstrap.com/)
+- [Buddy: Testing with Jest: Start with a basic To­-Do application](https://buddy.works/tutorials/testing-with-jest-basic-to%C2%AD-do-application)
+- [Digital Ocean: How To Create Interactive Command-line Prompts with Inquirer.js](https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts)
+- [Font Awesome](https://fontawesome.com/)
+- [Frontend Testing with Jest - Assertions deep dive](https://techblog.topdesk.com/coding/frontend-testing-with-jest-assertions-deep-dive/)
+- [Jest: .toEqual(value)](https://jestjs.io/docs/expect#toequalvalue)
+- [Jest: Getting Started](https://jestjs.io/docs/getting-started)
 - [MDN Web Docs: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [MDN Web Docs: drop-shadow()](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow)
+- [Node.js: File system](https://nodejs.org/api/fs.html)
+- [NPM: inquirer](https://www.npmjs.com/package//inquirer)
+- [Pakstech: Use Inquirer.js to Create a Conversational CLI User Interface](https://pakstech.com/blog/inquirer-js/)
+- [The Pen and Paper Programmer: Repeating questions with 'inquirer.js'](http://www.penandpaperprogrammer.com/blog/2018/12/16/repeating-questions-with-inquirerjs)
+- [Valentino G. Blog: Jest Tutorial for Beginners: Getting Started With JavaScript Testing](https://www.valentinog.com/blog/jest/#:~:text=Jest%20is%20a%20JavaScript%20test,default%20choice%20for%20React%20projects.)
+- [W3Schools: JavaScript Classes](https://www.w3schools.com/js/js_classes.asp)
+- [WikiHow: Create an Email Link in HTML](https://www.wikihow.com/Create-an-Email-Link-in-HTML)
 
 ## Author
 
