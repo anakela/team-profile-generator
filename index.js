@@ -12,7 +12,6 @@ const newManager = [
         message: 'What is your manager name?',
         name: 'name',
         type: 'input',
-        // default: 'Team Manager',
         // validate: 
     },
     {

@@ -68,34 +68,25 @@ THEN I exit the application, and the HTML is generated
 
 ### Built With
 
-- Semantic HTML5 markup
+- Semantic HTML5 Markup
 - CSS
 - JavaScript
 - Node.js
+- Jest
 
 ### What I Learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was another challenging exercise!  I learned several things while completing this assignment.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-If you want more help with writing markdown, check out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- First, I learned that if you try to pass an empty array to a dynamically created HTML file using JavaScript, it will appear as `undefined`.  (Oops!)
+- I also discovered that when linking my CSS file in the `generateHtmlPage.js` file, I needed to update the path.  (I initially created an `index.html` page in the root folder to assist myself in formatting the page.  However, I found that the path wasn't valid when I pasted the HTML code into `generateHtmlPage.js`.)
+- Thirdly, this challenge helped me practice creating `test.js` files.  As someone new to the testing, I found this to be an interesting process.
 
 ### Continued Development
 
-I would love to use this application in conjunction with a database in the future.  I believe this would allow me to better hone my skills with not only JavaScript and Node.js, but also with SQL and other database technologies.
+- I would love to use this application in conjunction with a database in the future.  I believe this would allow me to better hone my skills with not only JavaScript and Node.js, but also with SQL and other database technologies.
+- I would also like to validate the input for each inquirer prompt in a future git push.
+- Lastly, I would like to continue to learn more about creating and running `test.js` files.
 
 ### Useful Resources
 
@@ -128,3 +119,4 @@ I would love to use this application in conjunction with a database in the futur
   - Ivy Chang
 - Bobbi Tarkany (Tutor)
 - Matthew Kaus (TA)
+- Scott Nelson (TA)
