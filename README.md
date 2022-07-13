@@ -60,6 +60,8 @@ THEN I exit the application, and the HTML is generated
 
 ![](./assets/images/team-profile-generator-screenshot.png)
 
+https://user-images.githubusercontent.com/103882157/178655558-1d2a6a22-05c2-411e-b2c8-e5bd281c7900.mp4
+
 ### Links
 
 - Solution URL: [https://github.com/anakela/team-profile-generator](https://github.com/anakela/team-profile-generator)
